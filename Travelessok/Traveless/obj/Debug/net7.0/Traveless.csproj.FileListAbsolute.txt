@@ -1,0 +1,64 @@
+D:\Work\Mudit\Traveless\bin\Debug\net7.0\appsettings.Development.json
+D:\Work\Mudit\Traveless\bin\Debug\net7.0\appsettings.json
+D:\Work\Mudit\Traveless\bin\Debug\net7.0\Traveless.staticwebassets.runtime.json
+D:\Work\Mudit\Traveless\bin\Debug\net7.0\Traveless.exe
+D:\Work\Mudit\Traveless\bin\Debug\net7.0\Traveless.deps.json
+D:\Work\Mudit\Traveless\bin\Debug\net7.0\Traveless.runtimeconfig.json
+D:\Work\Mudit\Traveless\bin\Debug\net7.0\Traveless.dll
+D:\Work\Mudit\Traveless\bin\Debug\net7.0\Traveless.pdb
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.csproj.AssemblyReference.cache
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.AssemblyInfoInputs.cache
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.AssemblyInfo.cs
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.csproj.CoreCompileInputs.cache
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.MvcApplicationPartsAssemblyInfo.cache
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.RazorAssemblyInfo.cache
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.RazorAssemblyInfo.cs
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\staticwebassets\msbuild.Traveless.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\staticwebassets\msbuild.build.Traveless.props
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Traveless.props
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Traveless.props
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\staticwebassets.build.json
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\staticwebassets.development.json
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\scopedcss\bundle\Traveless.styles.css
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\scopedcss\projectbundle\Traveless.bundle.scp.css
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.dll
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\refint\Traveless.dll
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.pdb
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\Traveless.genruntimeconfig.cache
+D:\Work\Mudit\Traveless\obj\Debug\net7.0\ref\Traveless.dll
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\bin\Debug\net7.0\appsettings.json
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\bin\Debug\net7.0\Traveless.staticwebassets.runtime.json
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\bin\Debug\net7.0\Traveless.exe
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\bin\Debug\net7.0\Traveless.deps.json
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\bin\Debug\net7.0\Traveless.runtimeconfig.json
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\bin\Debug\net7.0\Traveless.dll
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\bin\Debug\net7.0\Traveless.pdb
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.csproj.AssemblyReference.cache
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.AssemblyInfoInputs.cache
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.AssemblyInfo.cs
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.csproj.CoreCompileInputs.cache
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.RazorAssemblyInfo.cache
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.RazorAssemblyInfo.cs
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\staticwebassets\msbuild.Traveless.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\staticwebassets\msbuild.build.Traveless.props
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Traveless.props
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Traveless.props
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\scopedcss\bundle\Traveless.styles.css
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\scopedcss\projectbundle\Traveless.bundle.scp.css
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.dll
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\refint\Traveless.dll
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.pdb
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\Traveless.genruntimeconfig.cache
+C:\Users\Mudit Pathak\OneDrive - Southern Alberta Institute of Technology\Desktop\Travelessok\Traveless\obj\Debug\net7.0\ref\Traveless.dll

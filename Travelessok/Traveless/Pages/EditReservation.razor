@@ -1,0 +1,161 @@
+﻿@page "/reservation"
+@using Traveless.Data
+@inject ReservationManager reservationManager
+
+<h3 style="text-align:center;">Reservation Finder</h3>
+<br />
+
+<div class="row">
+    <div class="col-3">
+        <label>Code:</label>
+        <input type="text" class="form-control" placeholder="Any" />
+    </div>
+    <div class="col-3">
+        <label>Airline:</label>
+        <input type="text" class="form-control" placeholder="Any" />
+    </div>
+    <div class="col-3">
+        <label>Name:</label>
+        <input type="text" class="form-control" placeholder="Any" />
+    </div>
+    <div class="col-3">
+        <label> </label>
+        <button @onclick="LoadData" type="submit" class="btn btn-primary form-control">Find reservations</button>
+    </div>
+
+</div>
+
+<h3 class="mt-5 mb-3" style="text-align: center;">Reservations</h3>
+<div style="border: 1px solid grey; padding:5px; height: 50px; overflow:hidden; overflow-y:scroll;">
+
+    @if (isLoading)
+    {
+        <h6>Loading...</h6>
+    }
+
+    else if (reservations!.Any())
+    {
+        <table class="table">
+            <tbody>
+                @foreach (var reservation in reservations!)
+                {
+                    <tr>
+                        <td @onclick="()=>GetReserveData(reservation)" style="cursor:pointer;">
+                            @reservation.FlightCode, @reservation.Airline, @reservation.From, @reservation.To, @reservation.Day, @reservation.Time, @reservation.ReservationCode, @reservation.Cost, @reservation.Name, @reservation.Citizenship, @reservation.Status
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h6>
+            No Record Found.
+        </h6>
+    }
+</div>
+
+<h3 class="mt-5 mb-3" style="text-align: center; margin-top:20px;">Reserve</h3>
+<EditForm Model="reservation" OnValidSubmit="UpdateReservation">
+    <DataAnnotationsValidator />
+    <div class="mb-2">
+        <label>Flight code:</label>
+        <InputText class="form-control" readonly placeholder="Flight" @bind-Value="reservation!.FlightCode" />
+    </div>
+    <div class="mb-2">
+        <label>Airline:</label>
+        <InputText class="form-control" readonly placeholder="Airline" @bind-Value="reservation!.Airline" />
+    </div>
+        <div class="mb-2">
+        <label>From:</label>
+        <InputText class="form-control" readonly placeholder="From" @bind-Value="reservation!.From" />
+    </div>
+    <div class="mb-2">
+        <label>To:</label>
+        <InputText class="form-control" readonly placeholder="To" @bind-Value="reservation!.To" />
+    </div>
+    <div class="mb-2">
+        <label>Day:</label>
+        <InputText class="form-control" readonly placeholder="Day" @bind-Value="reservation!.Day" />
+    </div>
+    <div class="mb-2">
+        <label>Time:</label>
+        <InputText class="form-control" readonly placeholder="Time" @bind-Value="reservation!.Time" />
+    </div>
+    <div class="mb-2">
+        <label>Cost:</label>
+        <InputText class="form-control" placeholder="0" readonly @bind-Value="reservation!.Cost" />
+    </div>
+    <div class="mb-2">
+        <label>Name:</label>
+        <InputText class="form-control" placeholder="Name" @bind-Value="reservation!.Name" />
+        <ValidationMessage For="()=>reservation!.Name" />
+    </div>
+    <div class="mb-2">
+        <label>Citizenship:</label>
+        <InputText class="form-control" placeholder="Citizenship" @bind-Value="reservation!.Citizenship" />
+        <ValidationMessage For="()=>reservation!.Citizenship" />
+    </div>
+    <div class="mb-2">
+        <label>Status:</label>
+
+        <InputSelect @bind-Value="reservation!.Status"
+                     class="form-select">
+
+            <option value="Active" selected>Active</option>
+
+            <option value="InActive" selected>InActive</option>
+
+
+        </InputSelect>
+        <ValidationMessage For="()=>reservation!.Status" />
+
+    </div>
+    <div class="mt-4 mb-5" style="text-align: center;">
+        <button class="btn btn-primary"> Save</button> <br />
+        
+    </div>
+</EditForm>
+
+
+@code {
+
+    private List<Reservation>? reservations = new List<Reservation>();
+    private Reservation reservation = new Reservation();
+    private bool isLoading = true;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        reservation = await reservationManager.GetReservationSingleAsync();
+        
+    }
+
+
+    private async Task LoadData()
+    {
+        reservations = await reservationManager.GetReservationAsync();
+        
+        isLoading = false;
+    }
+
+    private void GetReserveData(Reservation reservation)
+    {
+        reservation!.FlightCode = reservation.FlightCode;
+        reservation!.Airline = reservation.Airline;
+        reservation!.Day = reservation.Day;
+        reservation!.Time = reservation.Time;
+        reservation!.Cost = reservation.Cost;
+        reservation!.ReservationCode = reservation.ReservationCode;
+        reservation!.Status = reservation.Status;
+       
+        StateHasChanged();
+    }
+
+    private async Task UpdateReservation()
+    {
+        await reservationManager.CreateReservation(reservation!);
+        StateHasChanged();
+    }
+}

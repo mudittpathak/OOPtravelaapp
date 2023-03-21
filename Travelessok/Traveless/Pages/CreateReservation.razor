@@ -1,0 +1,144 @@
+﻿@page "/flight"
+@using Traveless.Data
+@inject ReservationManager reservationManager
+
+<h3 style="text-align:center;">Flight Finder</h3>
+<br />
+
+<div class="row">
+    <div class="col-3">
+        <label>From</label>
+        <input type="text" class="form-control" placeholder="Any" />
+    </div>
+    <div class="col-3">
+        <label>To</label>
+        <input type="text" class="form-control" placeholder="Any" />
+    </div>
+    <div class="col-3">
+        <label>Day</label>
+        <input type="text" class="form-control" placeholder="Any" />
+    </div>
+    <div class="col-3">
+        <label> </label>
+        <button @onclick="LoadData" type="submit" class="btn btn-primary form-control">Find flights</button>
+    </div>
+
+</div>
+
+<h3 class="mt-5 mb-3" style="text-align: center;">Flights</h3>
+<div style="border: 1px solid grey; padding:5px; height: 50px; overflow:hidden; overflow-y:scroll;">
+
+    @if (isLoading)
+    {
+        <h6>Loading...</h6>
+    }
+
+    else if (flights!.Any())
+    {
+        <table class="table">
+            <tbody>
+                @foreach (var flight in flights!)
+                {
+                    <tr>
+                        <td @onclick="()=>GetReserveData(flight)" style="cursor:pointer;">
+                            @flight.FlightCode, @flight.Airline, @flight.From, @flight.To, @flight.Day, @flight.Time, @flight.ReservationCode, @flight.Cost
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h6>
+            No Record Found with From:
+        </h6>
+    }
+</div>
+
+
+<h3 class="mt-5 mb-3" style="text-align: center; margin-top:20px;">Reserve</h3>
+<EditForm Model="reservation" OnValidSubmit="AddReserVation">
+    <DataAnnotationsValidator />
+    <div class="mb-2">
+        <label>Flight code:</label>
+        <InputText class="form-control" readonly placeholder="Flight" @bind-Value="reservation!.FlightCode" />
+    </div>
+    <div class="mb-2">
+        <label>Airline:</label>
+        <InputText class="form-control" readonly placeholder="Airline" @bind-Value="reservation!.Airline" />
+    </div>
+    <div class="mb-2">
+        <label>From:</label>
+        <InputText class="form-control" readonly placeholder="From" @bind-Value="reservation!.From" />
+    </div>
+    <div class="mb-2">
+        <label>To:</label>
+        <InputText class="form-control" readonly placeholder="To" @bind-Value="reservation!.To" />
+    </div>
+    <div class="mb-2">
+        <label>Day:</label>
+        <InputText class="form-control" readonly placeholder="Day" @bind-Value="reservation!.Day" />
+    </div>
+    <div class="mb-2">
+        <label>Time:</label>
+        <InputText class="form-control" readonly placeholder="Time" @bind-Value="reservation!.Time" />
+    </div>
+    <div class="mb-2">
+        <label>Cost:</label>
+        <InputText class="form-control" placeholder="0" readonly @bind-Value="reservation!.Cost" />
+    </div>
+    <div class="mb-2">
+        <label>Name:</label>
+        <InputText class="form-control" placeholder="Name" @bind-Value="reservation!.Name" />
+        <ValidationMessage For="()=>reservation!.Name" />
+    </div>
+    <div class="mb-2">
+        <label>Citizenship:</label>
+        <InputText class="form-control" placeholder="Citizenship" @bind-Value="reservation!.Citizenship" />
+        <ValidationMessage For="()=>reservation!.Citizenship" />
+    </div>
+    <div class="mt-4 mb-5" style="text-align: center;">
+        <button class="btn btn-primary"> Reserve</button> <br />
+        <p class="mt-2">Reservation Code: @(reservationCode)</p>
+    </div>
+</EditForm>
+
+
+@code {
+    private List<Flight>? flights = new List<Flight>();
+    //private Flight? flight = new Flight();
+    private Reservation? reservation = new Reservation();
+    private string reservationCode = "";
+    private bool isLoading = true;
+
+    private async void LoadData()
+    {
+        flights = await reservationManager.GetFlightAsync();
+        isLoading = false;
+        StateHasChanged();
+    }
+
+    private void GetReserveData(Flight flight)
+    {
+        reservation!.FlightCode = flight.FlightCode;
+        reservation!.Airline = flight.Airline;
+        reservation!.From = flight.From;
+        reservation!.To = flight.To;
+        reservation!.Day = flight.Day;
+        reservation!.Time = flight.Time;
+        reservation!.Cost = flight.Cost;
+        reservation!.ReservationCode = "D"+flight.ReservationCode;
+        reservation!.Status = "Active";
+        StateHasChanged();
+    }
+
+    private async Task AddReserVation()
+    {
+        await reservationManager.CreateReservation(reservation!);
+
+        reservationCode = reservation!.ReservationCode!;
+        reservation = new Reservation();
+        StateHasChanged();
+    }
+}
